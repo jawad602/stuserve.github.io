@@ -1,0 +1,1766 @@
+@font-face {
+  font-family: AvenirNext-Bold;
+  src: url(../fonts/AvenirNext-Bold.ttf); }
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url(../fonts/AEH.ttf); }
+@font-face {
+  font-family: Avenir-Medium;
+  src: url(../fonts/Avenir-Medium.ttf); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Avenir-Medium; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  column-gap: 172px;
+  width: 100%;
+  height: 100%; }
+  .container .left {
+    width: 800px;
+    height: 100%;
+    justify-self: right;
+    position: relative;
+    top: 0;
+    left: 0; }
+    .container .left::before {
+      content: '';
+      background: url("../images/sign-up-bg.svg") no-repeat center center/cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; }
+  .container .left-sub {
+    width: 619px;
+    height: 650px;
+    margin: auto; }
+  .container .left-logo {
+    width: 167px;
+    height: 51px;
+    margin: 48px 0 93px 0;
+    cursor: pointer; }
+  .container .heading {
+    width: 619px;
+    height: 273px;
+    margin-bottom: 87px;
+    font-size: 73px;
+    font-family: AvenirNext-Bold;
+    color: white; }
+  .container .title {
+    width: 112px;
+    height: 32px;
+    font-size: 24px;
+    font-family: Avenir-Heavy;
+    color: white; }
+  .container .content {
+    width: 528px;
+    height: 66px;
+    color: white; }
+  .container .right {
+    height: 100vh;
+    justify-self: left; }
+  .container .right-logo {
+    width: 167px;
+    height: 51px;
+    margin: 48px 0 120px 0;
+    cursor: pointer; }
+  .container .right-login-body,
+  .container .signup-area,
+  .container .forget-area {
+    width: 100%;
+    margin-left: 22px; }
+  .container .login-title,
+  .container .signup-title {
+    width: 80px;
+    height: 40px;
+    font-size: 30px;
+    font-family: Avenir-Heavy; }
+  .container .login-content,
+  .container .signup-content {
+    width: 501px;
+    height: 44px;
+    margin-bottom: 37px; }
+  .container label {
+    height: 21px;
+    display: inline-block;
+    margin-bottom: 5px; }
+  .container input:not(.checkbox) {
+    width: 517px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    outline: none; }
+  .container .remember label {
+    display: inline-block;
+    margin-left: 5px; }
+  .container button {
+    width: 517px;
+    height: 40px;
+    background-color: #7D83FF;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 38px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px; }
+  .container .sign-in,
+  .container .login {
+    width: 501px;
+    height: 22px;
+    text-align: center; }
+    .container .sign-in a,
+    .container .login a {
+      text-decoration: none;
+      color: #7D83FF; }
+  .container .forget-title {
+    height: 40px;
+    color: #3E434D;
+    font-size: 30px;
+    font-family: Avenir-Heavy;
+    margin: 0 0 40px 131px;
+    text-align: left; }
+  .container .forget-image {
+    width: 129px;
+    height: 138px;
+    margin: 0 0 71px 216px; }
+
+.login-page .left {
+  background-image: url("../images/log-in-background.jpg");
+  background-size: cover; }
+.login-page .right-login-body button {
+  margin-top: 56px; }
+
+.forget-pass .left {
+  background: url("../images/forget-password-bg.svg"); }
+.forget-pass .forget-area button {
+  margin-top: 10px; }
+
+.sign-in-page .right-logo {
+  margin-bottom: 62px; }
+.sign-in-page .signup-area button {
+  margin-top: 24px; }
+
+.user-profile-page,
+.gullds,
+.single-post-1,
+.feed-page {
+  width: 80%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 167px 1fr;
+  grid-template-rows: 52px 1fr;
+  margin: 0 auto;
+  column-gap: 100px;
+  row-gap: 20px; }
+  .user-profile-page .user-profile-left,
+  .user-profile-page .gullds-left,
+  .user-profile-page .single-post-left,
+  .user-profile-page .feed-left,
+  .gullds .user-profile-left,
+  .gullds .gullds-left,
+  .gullds .single-post-left,
+  .gullds .feed-left,
+  .single-post-1 .user-profile-left,
+  .single-post-1 .gullds-left,
+  .single-post-1 .single-post-left,
+  .single-post-1 .feed-left,
+  .feed-page .user-profile-left,
+  .feed-page .gullds-left,
+  .feed-page .single-post-left,
+  .feed-page .feed-left {
+    height: 100vh; }
+  .user-profile-page .left-logo,
+  .gullds .left-logo,
+  .single-post-1 .left-logo,
+  .feed-page .left-logo {
+    height: 51px;
+    margin-bottom: 30px;
+    cursor: pointer; }
+  .user-profile-page .sports-club,
+  .gullds .sports-club,
+  .single-post-1 .sports-club,
+  .feed-page .sports-club {
+    width: 146px; }
+    .user-profile-page .sports-club ul,
+    .gullds .sports-club ul,
+    .single-post-1 .sports-club ul,
+    .feed-page .sports-club ul {
+      list-style: none; }
+      .user-profile-page .sports-club ul li,
+      .gullds .sports-club ul li,
+      .single-post-1 .sports-club ul li,
+      .feed-page .sports-club ul li {
+        cursor: pointer;
+        letter-spacing: 0px;
+        color: #A7A7A7; }
+        .user-profile-page .sports-club ul li:first-of-type,
+        .gullds .sports-club ul li:first-of-type,
+        .single-post-1 .sports-club ul li:first-of-type,
+        .feed-page .sports-club ul li:first-of-type {
+          color: #000000;
+          font-family: Avenir-Heavy; }
+        .user-profile-page .sports-club ul li:hover,
+        .gullds .sports-club ul li:hover,
+        .single-post-1 .sports-club ul li:hover,
+        .feed-page .sports-club ul li:hover {
+          color: #000000; }
+  .user-profile-page .all-posts,
+  .gullds .all-posts,
+  .single-post-1 .all-posts,
+  .feed-page .all-posts {
+    width: 146px; }
+    .user-profile-page .all-posts ul,
+    .gullds .all-posts ul,
+    .single-post-1 .all-posts ul,
+    .feed-page .all-posts ul {
+      list-style: none; }
+      .user-profile-page .all-posts ul li,
+      .gullds .all-posts ul li,
+      .single-post-1 .all-posts ul li,
+      .feed-page .all-posts ul li {
+        cursor: pointer;
+        color: #A7A7A7; }
+        .user-profile-page .all-posts ul li:hover,
+        .gullds .all-posts ul li:hover,
+        .single-post-1 .all-posts ul li:hover,
+        .feed-page .all-posts ul li:hover {
+          color: black; }
+        .user-profile-page .all-posts ul li ul,
+        .gullds .all-posts ul li ul,
+        .single-post-1 .all-posts ul li ul,
+        .feed-page .all-posts ul li ul {
+          margin-left: 19px; }
+    .user-profile-page .all-posts > ul,
+    .gullds .all-posts > ul,
+    .single-post-1 .all-posts > ul,
+    .feed-page .all-posts > ul {
+      list-style: none; }
+      .user-profile-page .all-posts > ul > li,
+      .gullds .all-posts > ul > li,
+      .single-post-1 .all-posts > ul > li,
+      .feed-page .all-posts > ul > li {
+        margin-bottom: 28px; }
+        .user-profile-page .all-posts > ul > li:first-child,
+        .gullds .all-posts > ul > li:first-child,
+        .single-post-1 .all-posts > ul > li:first-child,
+        .feed-page .all-posts > ul > li:first-child {
+          color: black;
+          font-family: Avenir-Heavy; }
+  .user-profile-page .user-profile-right,
+  .user-profile-page .single-post-right,
+  .user-profile-page .feed-right,
+  .user-profile-page .gullds-right,
+  .gullds .user-profile-right,
+  .gullds .single-post-right,
+  .gullds .feed-right,
+  .gullds .gullds-right,
+  .single-post-1 .user-profile-right,
+  .single-post-1 .single-post-right,
+  .single-post-1 .feed-right,
+  .single-post-1 .gullds-right,
+  .feed-page .user-profile-right,
+  .feed-page .single-post-right,
+  .feed-page .feed-right,
+  .feed-page .gullds-right {
+    height: 100vh; }
+    .user-profile-page .user-profile-right .header,
+    .user-profile-page .single-post-right .header,
+    .user-profile-page .feed-right .header,
+    .user-profile-page .gullds-right .header,
+    .gullds .user-profile-right .header,
+    .gullds .single-post-right .header,
+    .gullds .feed-right .header,
+    .gullds .gullds-right .header,
+    .single-post-1 .user-profile-right .header,
+    .single-post-1 .single-post-right .header,
+    .single-post-1 .feed-right .header,
+    .single-post-1 .gullds-right .header,
+    .feed-page .user-profile-right .header,
+    .feed-page .single-post-right .header,
+    .feed-page .feed-right .header,
+    .feed-page .gullds-right .header {
+      color: #A7A7A7;
+      height: 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .user-profile-page .user-profile-right .header .header-left ul,
+      .user-profile-page .single-post-right .header .header-left ul,
+      .user-profile-page .feed-right .header .header-left ul,
+      .user-profile-page .gullds-right .header .header-left ul,
+      .gullds .user-profile-right .header .header-left ul,
+      .gullds .single-post-right .header .header-left ul,
+      .gullds .feed-right .header .header-left ul,
+      .gullds .gullds-right .header .header-left ul,
+      .single-post-1 .user-profile-right .header .header-left ul,
+      .single-post-1 .single-post-right .header .header-left ul,
+      .single-post-1 .feed-right .header .header-left ul,
+      .single-post-1 .gullds-right .header .header-left ul,
+      .feed-page .user-profile-right .header .header-left ul,
+      .feed-page .single-post-right .header .header-left ul,
+      .feed-page .feed-right .header .header-left ul,
+      .feed-page .gullds-right .header .header-left ul {
+        list-style: none;
+        display: flex;
+        grid-gap: 47px; }
+        .user-profile-page .user-profile-right .header .header-left ul li,
+        .user-profile-page .single-post-right .header .header-left ul li,
+        .user-profile-page .feed-right .header .header-left ul li,
+        .user-profile-page .gullds-right .header .header-left ul li,
+        .gullds .user-profile-right .header .header-left ul li,
+        .gullds .single-post-right .header .header-left ul li,
+        .gullds .feed-right .header .header-left ul li,
+        .gullds .gullds-right .header .header-left ul li,
+        .single-post-1 .user-profile-right .header .header-left ul li,
+        .single-post-1 .single-post-right .header .header-left ul li,
+        .single-post-1 .feed-right .header .header-left ul li,
+        .single-post-1 .gullds-right .header .header-left ul li,
+        .feed-page .user-profile-right .header .header-left ul li,
+        .feed-page .single-post-right .header .header-left ul li,
+        .feed-page .feed-right .header .header-left ul li,
+        .feed-page .gullds-right .header .header-left ul li {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          grid-gap: 6px; }
+          .user-profile-page .user-profile-right .header .header-left ul li:last-child,
+          .user-profile-page .single-post-right .header .header-left ul li:last-child,
+          .user-profile-page .feed-right .header .header-left ul li:last-child,
+          .user-profile-page .gullds-right .header .header-left ul li:last-child,
+          .gullds .user-profile-right .header .header-left ul li:last-child,
+          .gullds .single-post-right .header .header-left ul li:last-child,
+          .gullds .feed-right .header .header-left ul li:last-child,
+          .gullds .gullds-right .header .header-left ul li:last-child,
+          .single-post-1 .user-profile-right .header .header-left ul li:last-child,
+          .single-post-1 .single-post-right .header .header-left ul li:last-child,
+          .single-post-1 .feed-right .header .header-left ul li:last-child,
+          .single-post-1 .gullds-right .header .header-left ul li:last-child,
+          .feed-page .user-profile-right .header .header-left ul li:last-child,
+          .feed-page .single-post-right .header .header-left ul li:last-child,
+          .feed-page .feed-right .header .header-left ul li:last-child,
+          .feed-page .gullds-right .header .header-left ul li:last-child {
+            margin-right: 0px; }
+          .user-profile-page .user-profile-right .header .header-left ul li:hover,
+          .user-profile-page .single-post-right .header .header-left ul li:hover,
+          .user-profile-page .feed-right .header .header-left ul li:hover,
+          .user-profile-page .gullds-right .header .header-left ul li:hover,
+          .gullds .user-profile-right .header .header-left ul li:hover,
+          .gullds .single-post-right .header .header-left ul li:hover,
+          .gullds .feed-right .header .header-left ul li:hover,
+          .gullds .gullds-right .header .header-left ul li:hover,
+          .single-post-1 .user-profile-right .header .header-left ul li:hover,
+          .single-post-1 .single-post-right .header .header-left ul li:hover,
+          .single-post-1 .feed-right .header .header-left ul li:hover,
+          .single-post-1 .gullds-right .header .header-left ul li:hover,
+          .feed-page .user-profile-right .header .header-left ul li:hover,
+          .feed-page .single-post-right .header .header-left ul li:hover,
+          .feed-page .feed-right .header .header-left ul li:hover,
+          .feed-page .gullds-right .header .header-left ul li:hover {
+            color: #000000; }
+      .user-profile-page .user-profile-right .header .header-right,
+      .user-profile-page .single-post-right .header .header-right,
+      .user-profile-page .feed-right .header .header-right,
+      .user-profile-page .gullds-right .header .header-right,
+      .gullds .user-profile-right .header .header-right,
+      .gullds .single-post-right .header .header-right,
+      .gullds .feed-right .header .header-right,
+      .gullds .gullds-right .header .header-right,
+      .single-post-1 .user-profile-right .header .header-right,
+      .single-post-1 .single-post-right .header .header-right,
+      .single-post-1 .feed-right .header .header-right,
+      .single-post-1 .gullds-right .header .header-right,
+      .feed-page .user-profile-right .header .header-right,
+      .feed-page .single-post-right .header .header-right,
+      .feed-page .feed-right .header .header-right,
+      .feed-page .gullds-right .header .header-right {
+        justify-self: right;
+        color: #414042; }
+        .user-profile-page .user-profile-right .header .header-right ul,
+        .user-profile-page .single-post-right .header .header-right ul,
+        .user-profile-page .feed-right .header .header-right ul,
+        .user-profile-page .gullds-right .header .header-right ul,
+        .gullds .user-profile-right .header .header-right ul,
+        .gullds .single-post-right .header .header-right ul,
+        .gullds .feed-right .header .header-right ul,
+        .gullds .gullds-right .header .header-right ul,
+        .single-post-1 .user-profile-right .header .header-right ul,
+        .single-post-1 .single-post-right .header .header-right ul,
+        .single-post-1 .feed-right .header .header-right ul,
+        .single-post-1 .gullds-right .header .header-right ul,
+        .feed-page .user-profile-right .header .header-right ul,
+        .feed-page .single-post-right .header .header-right ul,
+        .feed-page .feed-right .header .header-right ul,
+        .feed-page .gullds-right .header .header-right ul {
+          list-style: none;
+          display: flex;
+          grid-gap: 47px; }
+          .user-profile-page .user-profile-right .header .header-right ul li,
+          .user-profile-page .single-post-right .header .header-right ul li,
+          .user-profile-page .feed-right .header .header-right ul li,
+          .user-profile-page .gullds-right .header .header-right ul li,
+          .gullds .user-profile-right .header .header-right ul li,
+          .gullds .single-post-right .header .header-right ul li,
+          .gullds .feed-right .header .header-right ul li,
+          .gullds .gullds-right .header .header-right ul li,
+          .single-post-1 .user-profile-right .header .header-right ul li,
+          .single-post-1 .single-post-right .header .header-right ul li,
+          .single-post-1 .feed-right .header .header-right ul li,
+          .single-post-1 .gullds-right .header .header-right ul li,
+          .feed-page .user-profile-right .header .header-right ul li,
+          .feed-page .single-post-right .header .header-right ul li,
+          .feed-page .feed-right .header .header-right ul li,
+          .feed-page .gullds-right .header .header-right ul li {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            grid-gap: 6px; }
+            .user-profile-page .user-profile-right .header .header-right ul li:last-child,
+            .user-profile-page .single-post-right .header .header-right ul li:last-child,
+            .user-profile-page .feed-right .header .header-right ul li:last-child,
+            .user-profile-page .gullds-right .header .header-right ul li:last-child,
+            .gullds .user-profile-right .header .header-right ul li:last-child,
+            .gullds .single-post-right .header .header-right ul li:last-child,
+            .gullds .feed-right .header .header-right ul li:last-child,
+            .gullds .gullds-right .header .header-right ul li:last-child,
+            .single-post-1 .user-profile-right .header .header-right ul li:last-child,
+            .single-post-1 .single-post-right .header .header-right ul li:last-child,
+            .single-post-1 .feed-right .header .header-right ul li:last-child,
+            .single-post-1 .gullds-right .header .header-right ul li:last-child,
+            .feed-page .user-profile-right .header .header-right ul li:last-child,
+            .feed-page .single-post-right .header .header-right ul li:last-child,
+            .feed-page .feed-right .header .header-right ul li:last-child,
+            .feed-page .gullds-right .header .header-right ul li:last-child {
+              margin-right: 0px; }
+            .user-profile-page .user-profile-right .header .header-right ul li:hover,
+            .user-profile-page .single-post-right .header .header-right ul li:hover,
+            .user-profile-page .feed-right .header .header-right ul li:hover,
+            .user-profile-page .gullds-right .header .header-right ul li:hover,
+            .gullds .user-profile-right .header .header-right ul li:hover,
+            .gullds .single-post-right .header .header-right ul li:hover,
+            .gullds .feed-right .header .header-right ul li:hover,
+            .gullds .gullds-right .header .header-right ul li:hover,
+            .single-post-1 .user-profile-right .header .header-right ul li:hover,
+            .single-post-1 .single-post-right .header .header-right ul li:hover,
+            .single-post-1 .feed-right .header .header-right ul li:hover,
+            .single-post-1 .gullds-right .header .header-right ul li:hover,
+            .feed-page .user-profile-right .header .header-right ul li:hover,
+            .feed-page .single-post-right .header .header-right ul li:hover,
+            .feed-page .feed-right .header .header-right ul li:hover,
+            .feed-page .gullds-right .header .header-right ul li:hover {
+              color: #A7A7A7; }
+    .user-profile-page .user-profile-right .post,
+    .user-profile-page .single-post-right .post,
+    .user-profile-page .feed-right .post,
+    .user-profile-page .gullds-right .post,
+    .gullds .user-profile-right .post,
+    .gullds .single-post-right .post,
+    .gullds .feed-right .post,
+    .gullds .gullds-right .post,
+    .single-post-1 .user-profile-right .post,
+    .single-post-1 .single-post-right .post,
+    .single-post-1 .feed-right .post,
+    .single-post-1 .gullds-right .post,
+    .feed-page .user-profile-right .post,
+    .feed-page .single-post-right .post,
+    .feed-page .feed-right .post,
+    .feed-page .gullds-right .post {
+      width: 826px;
+      margin-left: 107px;
+      padding: 52px 31px 0px 46px;
+      box-shadow: 10px black; }
+      .user-profile-page .user-profile-right .post .label,
+      .user-profile-page .single-post-right .post .label,
+      .user-profile-page .feed-right .post .label,
+      .user-profile-page .gullds-right .post .label,
+      .gullds .user-profile-right .post .label,
+      .gullds .single-post-right .post .label,
+      .gullds .feed-right .post .label,
+      .gullds .gullds-right .post .label,
+      .single-post-1 .user-profile-right .post .label,
+      .single-post-1 .single-post-right .post .label,
+      .single-post-1 .feed-right .post .label,
+      .single-post-1 .gullds-right .post .label,
+      .feed-page .user-profile-right .post .label,
+      .feed-page .single-post-right .post .label,
+      .feed-page .feed-right .post .label,
+      .feed-page .gullds-right .post .label {
+        font-family: Avenir-Heavy;
+        font-size: 28px; }
+      .user-profile-page .user-profile-right .post .time,
+      .user-profile-page .single-post-right .post .time,
+      .user-profile-page .feed-right .post .time,
+      .user-profile-page .gullds-right .post .time,
+      .gullds .user-profile-right .post .time,
+      .gullds .single-post-right .post .time,
+      .gullds .feed-right .post .time,
+      .gullds .gullds-right .post .time,
+      .single-post-1 .user-profile-right .post .time,
+      .single-post-1 .single-post-right .post .time,
+      .single-post-1 .feed-right .post .time,
+      .single-post-1 .gullds-right .post .time,
+      .feed-page .user-profile-right .post .time,
+      .feed-page .single-post-right .post .time,
+      .feed-page .feed-right .post .time,
+      .feed-page .gullds-right .post .time {
+        height: 37px;
+        color: #8F8F8F;
+        font-size: 18px;
+        margin-bottom: 17px; }
+      .user-profile-page .user-profile-right .post .post-content,
+      .user-profile-page .single-post-right .post .post-content,
+      .user-profile-page .feed-right .post .post-content,
+      .user-profile-page .gullds-right .post .post-content,
+      .gullds .user-profile-right .post .post-content,
+      .gullds .single-post-right .post .post-content,
+      .gullds .feed-right .post .post-content,
+      .gullds .gullds-right .post .post-content,
+      .single-post-1 .user-profile-right .post .post-content,
+      .single-post-1 .single-post-right .post .post-content,
+      .single-post-1 .feed-right .post .post-content,
+      .single-post-1 .gullds-right .post .post-content,
+      .feed-page .user-profile-right .post .post-content,
+      .feed-page .single-post-right .post .post-content,
+      .feed-page .feed-right .post .post-content,
+      .feed-page .gullds-right .post .post-content {
+        height: 31px;
+        margin-bottom: 20px; }
+      .user-profile-page .user-profile-right .post .post-img,
+      .user-profile-page .single-post-right .post .post-img,
+      .user-profile-page .feed-right .post .post-img,
+      .user-profile-page .gullds-right .post .post-img,
+      .gullds .user-profile-right .post .post-img,
+      .gullds .single-post-right .post .post-img,
+      .gullds .feed-right .post .post-img,
+      .gullds .gullds-right .post .post-img,
+      .single-post-1 .user-profile-right .post .post-img,
+      .single-post-1 .single-post-right .post .post-img,
+      .single-post-1 .feed-right .post .post-img,
+      .single-post-1 .gullds-right .post .post-img,
+      .feed-page .user-profile-right .post .post-img,
+      .feed-page .single-post-right .post .post-img,
+      .feed-page .feed-right .post .post-img,
+      .feed-page .gullds-right .post .post-img {
+        height: 241px;
+        background-image: url("../images/post-img-1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 28px;
+        border-radius: 28px; }
+      .user-profile-page .user-profile-right .post .post-info,
+      .user-profile-page .single-post-right .post .post-info,
+      .user-profile-page .feed-right .post .post-info,
+      .user-profile-page .gullds-right .post .post-info,
+      .gullds .user-profile-right .post .post-info,
+      .gullds .single-post-right .post .post-info,
+      .gullds .feed-right .post .post-info,
+      .gullds .gullds-right .post .post-info,
+      .single-post-1 .user-profile-right .post .post-info,
+      .single-post-1 .single-post-right .post .post-info,
+      .single-post-1 .feed-right .post .post-info,
+      .single-post-1 .gullds-right .post .post-info,
+      .feed-page .user-profile-right .post .post-info,
+      .feed-page .single-post-right .post .post-info,
+      .feed-page .feed-right .post .post-info,
+      .feed-page .gullds-right .post .post-info {
+        display: flex;
+        grid-gap: 59px;
+        margin-bottom: 30px; }
+        .user-profile-page .user-profile-right .post .post-info .like-info,
+        .user-profile-page .single-post-right .post .post-info .like-info,
+        .user-profile-page .feed-right .post .post-info .like-info,
+        .user-profile-page .gullds-right .post .post-info .like-info,
+        .gullds .user-profile-right .post .post-info .like-info,
+        .gullds .single-post-right .post .post-info .like-info,
+        .gullds .feed-right .post .post-info .like-info,
+        .gullds .gullds-right .post .post-info .like-info,
+        .single-post-1 .user-profile-right .post .post-info .like-info,
+        .single-post-1 .single-post-right .post .post-info .like-info,
+        .single-post-1 .feed-right .post .post-info .like-info,
+        .single-post-1 .gullds-right .post .post-info .like-info,
+        .feed-page .user-profile-right .post .post-info .like-info,
+        .feed-page .single-post-right .post .post-info .like-info,
+        .feed-page .feed-right .post .post-info .like-info,
+        .feed-page .gullds-right .post .post-info .like-info {
+          display: flex;
+          grid-gap: 31px;
+          cursor: pointer; }
+        .user-profile-page .user-profile-right .post .post-info .comment-info,
+        .user-profile-page .single-post-right .post .post-info .comment-info,
+        .user-profile-page .feed-right .post .post-info .comment-info,
+        .user-profile-page .gullds-right .post .post-info .comment-info,
+        .gullds .user-profile-right .post .post-info .comment-info,
+        .gullds .single-post-right .post .post-info .comment-info,
+        .gullds .feed-right .post .post-info .comment-info,
+        .gullds .gullds-right .post .post-info .comment-info,
+        .single-post-1 .user-profile-right .post .post-info .comment-info,
+        .single-post-1 .single-post-right .post .post-info .comment-info,
+        .single-post-1 .feed-right .post .post-info .comment-info,
+        .single-post-1 .gullds-right .post .post-info .comment-info,
+        .feed-page .user-profile-right .post .post-info .comment-info,
+        .feed-page .single-post-right .post .post-info .comment-info,
+        .feed-page .feed-right .post .post-info .comment-info,
+        .feed-page .gullds-right .post .post-info .comment-info {
+          display: flex;
+          grid-gap: 31px;
+          cursor: pointer; }
+        .user-profile-page .user-profile-right .post .post-info .bookmark,
+        .user-profile-page .single-post-right .post .post-info .bookmark,
+        .user-profile-page .feed-right .post .post-info .bookmark,
+        .user-profile-page .gullds-right .post .post-info .bookmark,
+        .gullds .user-profile-right .post .post-info .bookmark,
+        .gullds .single-post-right .post .post-info .bookmark,
+        .gullds .feed-right .post .post-info .bookmark,
+        .gullds .gullds-right .post .post-info .bookmark,
+        .single-post-1 .user-profile-right .post .post-info .bookmark,
+        .single-post-1 .single-post-right .post .post-info .bookmark,
+        .single-post-1 .feed-right .post .post-info .bookmark,
+        .single-post-1 .gullds-right .post .post-info .bookmark,
+        .feed-page .user-profile-right .post .post-info .bookmark,
+        .feed-page .single-post-right .post .post-info .bookmark,
+        .feed-page .feed-right .post .post-info .bookmark,
+        .feed-page .gullds-right .post .post-info .bookmark {
+          margin-left: auto;
+          margin-right: 70px;
+          cursor: pointer; }
+      .user-profile-page .user-profile-right .post .comment-one,
+      .user-profile-page .single-post-right .post .comment-one,
+      .user-profile-page .feed-right .post .comment-one,
+      .user-profile-page .gullds-right .post .comment-one,
+      .gullds .user-profile-right .post .comment-one,
+      .gullds .single-post-right .post .comment-one,
+      .gullds .feed-right .post .comment-one,
+      .gullds .gullds-right .post .comment-one,
+      .single-post-1 .user-profile-right .post .comment-one,
+      .single-post-1 .single-post-right .post .comment-one,
+      .single-post-1 .feed-right .post .comment-one,
+      .single-post-1 .gullds-right .post .comment-one,
+      .feed-page .user-profile-right .post .comment-one,
+      .feed-page .single-post-right .post .comment-one,
+      .feed-page .feed-right .post .comment-one,
+      .feed-page .gullds-right .post .comment-one {
+        display: flex;
+        align-items: center;
+        grid-gap: 19px;
+        margin-bottom: 18px;
+        color: #393939; }
+        .user-profile-page .user-profile-right .post .comment-one .comment-img img,
+        .user-profile-page .single-post-right .post .comment-one .comment-img img,
+        .user-profile-page .feed-right .post .comment-one .comment-img img,
+        .user-profile-page .gullds-right .post .comment-one .comment-img img,
+        .gullds .user-profile-right .post .comment-one .comment-img img,
+        .gullds .single-post-right .post .comment-one .comment-img img,
+        .gullds .feed-right .post .comment-one .comment-img img,
+        .gullds .gullds-right .post .comment-one .comment-img img,
+        .single-post-1 .user-profile-right .post .comment-one .comment-img img,
+        .single-post-1 .single-post-right .post .comment-one .comment-img img,
+        .single-post-1 .feed-right .post .comment-one .comment-img img,
+        .single-post-1 .gullds-right .post .comment-one .comment-img img,
+        .feed-page .user-profile-right .post .comment-one .comment-img img,
+        .feed-page .single-post-right .post .comment-one .comment-img img,
+        .feed-page .feed-right .post .comment-one .comment-img img,
+        .feed-page .gullds-right .post .comment-one .comment-img img {
+          width: 64px;
+          height: 64px; }
+        .user-profile-page .user-profile-right .post .comment-one .write-comment input,
+        .user-profile-page .single-post-right .post .comment-one .write-comment input,
+        .user-profile-page .feed-right .post .comment-one .write-comment input,
+        .user-profile-page .gullds-right .post .comment-one .write-comment input,
+        .gullds .user-profile-right .post .comment-one .write-comment input,
+        .gullds .single-post-right .post .comment-one .write-comment input,
+        .gullds .feed-right .post .comment-one .write-comment input,
+        .gullds .gullds-right .post .comment-one .write-comment input,
+        .single-post-1 .user-profile-right .post .comment-one .write-comment input,
+        .single-post-1 .single-post-right .post .comment-one .write-comment input,
+        .single-post-1 .feed-right .post .comment-one .write-comment input,
+        .single-post-1 .gullds-right .post .comment-one .write-comment input,
+        .feed-page .user-profile-right .post .comment-one .write-comment input,
+        .feed-page .single-post-right .post .comment-one .write-comment input,
+        .feed-page .feed-right .post .comment-one .write-comment input,
+        .feed-page .gullds-right .post .comment-one .write-comment input {
+          border-radius: 5px;
+          border: 1px solid black;
+          min-width: 220px;
+          height: 38px;
+          outline: none;
+          padding: 9px 36px; }
+      .user-profile-page .user-profile-right .post .comment-second,
+      .user-profile-page .single-post-right .post .comment-second,
+      .user-profile-page .feed-right .post .comment-second,
+      .user-profile-page .gullds-right .post .comment-second,
+      .gullds .user-profile-right .post .comment-second,
+      .gullds .single-post-right .post .comment-second,
+      .gullds .feed-right .post .comment-second,
+      .gullds .gullds-right .post .comment-second,
+      .single-post-1 .user-profile-right .post .comment-second,
+      .single-post-1 .single-post-right .post .comment-second,
+      .single-post-1 .feed-right .post .comment-second,
+      .single-post-1 .gullds-right .post .comment-second,
+      .feed-page .user-profile-right .post .comment-second,
+      .feed-page .single-post-right .post .comment-second,
+      .feed-page .feed-right .post .comment-second,
+      .feed-page .gullds-right .post .comment-second {
+        display: flex;
+        align-items: center;
+        grid-gap: 19px;
+        color: #393939; }
+        .user-profile-page .user-profile-right .post .comment-second .comment-img img,
+        .user-profile-page .single-post-right .post .comment-second .comment-img img,
+        .user-profile-page .feed-right .post .comment-second .comment-img img,
+        .user-profile-page .gullds-right .post .comment-second .comment-img img,
+        .gullds .user-profile-right .post .comment-second .comment-img img,
+        .gullds .single-post-right .post .comment-second .comment-img img,
+        .gullds .feed-right .post .comment-second .comment-img img,
+        .gullds .gullds-right .post .comment-second .comment-img img,
+        .single-post-1 .user-profile-right .post .comment-second .comment-img img,
+        .single-post-1 .single-post-right .post .comment-second .comment-img img,
+        .single-post-1 .feed-right .post .comment-second .comment-img img,
+        .single-post-1 .gullds-right .post .comment-second .comment-img img,
+        .feed-page .user-profile-right .post .comment-second .comment-img img,
+        .feed-page .single-post-right .post .comment-second .comment-img img,
+        .feed-page .feed-right .post .comment-second .comment-img img,
+        .feed-page .gullds-right .post .comment-second .comment-img img {
+          width: 64px;
+          height: 64px; }
+        .user-profile-page .user-profile-right .post .comment-second .comments .commenting-user,
+        .user-profile-page .single-post-right .post .comment-second .comments .commenting-user,
+        .user-profile-page .feed-right .post .comment-second .comments .commenting-user,
+        .user-profile-page .gullds-right .post .comment-second .comments .commenting-user,
+        .gullds .user-profile-right .post .comment-second .comments .commenting-user,
+        .gullds .single-post-right .post .comment-second .comments .commenting-user,
+        .gullds .feed-right .post .comment-second .comments .commenting-user,
+        .gullds .gullds-right .post .comment-second .comments .commenting-user,
+        .single-post-1 .user-profile-right .post .comment-second .comments .commenting-user,
+        .single-post-1 .single-post-right .post .comment-second .comments .commenting-user,
+        .single-post-1 .feed-right .post .comment-second .comments .commenting-user,
+        .single-post-1 .gullds-right .post .comment-second .comments .commenting-user,
+        .feed-page .user-profile-right .post .comment-second .comments .commenting-user,
+        .feed-page .single-post-right .post .comment-second .comments .commenting-user,
+        .feed-page .feed-right .post .comment-second .comments .commenting-user,
+        .feed-page .gullds-right .post .comment-second .comments .commenting-user {
+          font-size: 18px; }
+        .user-profile-page .user-profile-right .post .comment-second .comments .comment,
+        .user-profile-page .single-post-right .post .comment-second .comments .comment,
+        .user-profile-page .feed-right .post .comment-second .comments .comment,
+        .user-profile-page .gullds-right .post .comment-second .comments .comment,
+        .gullds .user-profile-right .post .comment-second .comments .comment,
+        .gullds .single-post-right .post .comment-second .comments .comment,
+        .gullds .feed-right .post .comment-second .comments .comment,
+        .gullds .gullds-right .post .comment-second .comments .comment,
+        .single-post-1 .user-profile-right .post .comment-second .comments .comment,
+        .single-post-1 .single-post-right .post .comment-second .comments .comment,
+        .single-post-1 .feed-right .post .comment-second .comments .comment,
+        .single-post-1 .gullds-right .post .comment-second .comments .comment,
+        .feed-page .user-profile-right .post .comment-second .comments .comment,
+        .feed-page .single-post-right .post .comment-second .comments .comment,
+        .feed-page .feed-right .post .comment-second .comments .comment,
+        .feed-page .gullds-right .post .comment-second .comments .comment {
+          font-size: 18px; }
+    .user-profile-page .user-profile-right .profile-area,
+    .user-profile-page .single-post-right .profile-area,
+    .user-profile-page .feed-right .profile-area,
+    .user-profile-page .gullds-right .profile-area,
+    .gullds .user-profile-right .profile-area,
+    .gullds .single-post-right .profile-area,
+    .gullds .feed-right .profile-area,
+    .gullds .gullds-right .profile-area,
+    .single-post-1 .user-profile-right .profile-area,
+    .single-post-1 .single-post-right .profile-area,
+    .single-post-1 .feed-right .profile-area,
+    .single-post-1 .gullds-right .profile-area,
+    .feed-page .user-profile-right .profile-area,
+    .feed-page .single-post-right .profile-area,
+    .feed-page .feed-right .profile-area,
+    .feed-page .gullds-right .profile-area {
+      width: 920px;
+      margin-left: 108px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .user-profile-page .user-profile-right .profile-area .user-image,
+      .user-profile-page .single-post-right .profile-area .user-image,
+      .user-profile-page .feed-right .profile-area .user-image,
+      .user-profile-page .gullds-right .profile-area .user-image,
+      .gullds .user-profile-right .profile-area .user-image,
+      .gullds .single-post-right .profile-area .user-image,
+      .gullds .feed-right .profile-area .user-image,
+      .gullds .gullds-right .profile-area .user-image,
+      .single-post-1 .user-profile-right .profile-area .user-image,
+      .single-post-1 .single-post-right .profile-area .user-image,
+      .single-post-1 .feed-right .profile-area .user-image,
+      .single-post-1 .gullds-right .profile-area .user-image,
+      .feed-page .user-profile-right .profile-area .user-image,
+      .feed-page .single-post-right .profile-area .user-image,
+      .feed-page .feed-right .profile-area .user-image,
+      .feed-page .gullds-right .profile-area .user-image {
+        width: 152px;
+        height: 152px;
+        margin: 0 auto;
+        margin-bottom: 26px;
+        margin-top: 20px; }
+      .user-profile-page .user-profile-right .profile-area .user-email,
+      .user-profile-page .user-profile-right .profile-area .user-first-name,
+      .user-profile-page .user-profile-right .profile-area .user-last-name,
+      .user-profile-page .user-profile-right .profile-area .user-last-name,
+      .user-profile-page .user-profile-right .profile-area .user-uni-email,
+      .user-profile-page .user-profile-right .profile-area .user-language,
+      .user-profile-page .single-post-right .profile-area .user-email,
+      .user-profile-page .single-post-right .profile-area .user-first-name,
+      .user-profile-page .single-post-right .profile-area .user-last-name,
+      .user-profile-page .single-post-right .profile-area .user-last-name,
+      .user-profile-page .single-post-right .profile-area .user-uni-email,
+      .user-profile-page .single-post-right .profile-area .user-language,
+      .user-profile-page .feed-right .profile-area .user-email,
+      .user-profile-page .feed-right .profile-area .user-first-name,
+      .user-profile-page .feed-right .profile-area .user-last-name,
+      .user-profile-page .feed-right .profile-area .user-last-name,
+      .user-profile-page .feed-right .profile-area .user-uni-email,
+      .user-profile-page .feed-right .profile-area .user-language,
+      .user-profile-page .gullds-right .profile-area .user-email,
+      .user-profile-page .gullds-right .profile-area .user-first-name,
+      .user-profile-page .gullds-right .profile-area .user-last-name,
+      .user-profile-page .gullds-right .profile-area .user-last-name,
+      .user-profile-page .gullds-right .profile-area .user-uni-email,
+      .user-profile-page .gullds-right .profile-area .user-language,
+      .gullds .user-profile-right .profile-area .user-email,
+      .gullds .user-profile-right .profile-area .user-first-name,
+      .gullds .user-profile-right .profile-area .user-last-name,
+      .gullds .user-profile-right .profile-area .user-last-name,
+      .gullds .user-profile-right .profile-area .user-uni-email,
+      .gullds .user-profile-right .profile-area .user-language,
+      .gullds .single-post-right .profile-area .user-email,
+      .gullds .single-post-right .profile-area .user-first-name,
+      .gullds .single-post-right .profile-area .user-last-name,
+      .gullds .single-post-right .profile-area .user-last-name,
+      .gullds .single-post-right .profile-area .user-uni-email,
+      .gullds .single-post-right .profile-area .user-language,
+      .gullds .feed-right .profile-area .user-email,
+      .gullds .feed-right .profile-area .user-first-name,
+      .gullds .feed-right .profile-area .user-last-name,
+      .gullds .feed-right .profile-area .user-last-name,
+      .gullds .feed-right .profile-area .user-uni-email,
+      .gullds .feed-right .profile-area .user-language,
+      .gullds .gullds-right .profile-area .user-email,
+      .gullds .gullds-right .profile-area .user-first-name,
+      .gullds .gullds-right .profile-area .user-last-name,
+      .gullds .gullds-right .profile-area .user-last-name,
+      .gullds .gullds-right .profile-area .user-uni-email,
+      .gullds .gullds-right .profile-area .user-language,
+      .single-post-1 .user-profile-right .profile-area .user-email,
+      .single-post-1 .user-profile-right .profile-area .user-first-name,
+      .single-post-1 .user-profile-right .profile-area .user-last-name,
+      .single-post-1 .user-profile-right .profile-area .user-last-name,
+      .single-post-1 .user-profile-right .profile-area .user-uni-email,
+      .single-post-1 .user-profile-right .profile-area .user-language,
+      .single-post-1 .single-post-right .profile-area .user-email,
+      .single-post-1 .single-post-right .profile-area .user-first-name,
+      .single-post-1 .single-post-right .profile-area .user-last-name,
+      .single-post-1 .single-post-right .profile-area .user-last-name,
+      .single-post-1 .single-post-right .profile-area .user-uni-email,
+      .single-post-1 .single-post-right .profile-area .user-language,
+      .single-post-1 .feed-right .profile-area .user-email,
+      .single-post-1 .feed-right .profile-area .user-first-name,
+      .single-post-1 .feed-right .profile-area .user-last-name,
+      .single-post-1 .feed-right .profile-area .user-last-name,
+      .single-post-1 .feed-right .profile-area .user-uni-email,
+      .single-post-1 .feed-right .profile-area .user-language,
+      .single-post-1 .gullds-right .profile-area .user-email,
+      .single-post-1 .gullds-right .profile-area .user-first-name,
+      .single-post-1 .gullds-right .profile-area .user-last-name,
+      .single-post-1 .gullds-right .profile-area .user-last-name,
+      .single-post-1 .gullds-right .profile-area .user-uni-email,
+      .single-post-1 .gullds-right .profile-area .user-language,
+      .feed-page .user-profile-right .profile-area .user-email,
+      .feed-page .user-profile-right .profile-area .user-first-name,
+      .feed-page .user-profile-right .profile-area .user-last-name,
+      .feed-page .user-profile-right .profile-area .user-last-name,
+      .feed-page .user-profile-right .profile-area .user-uni-email,
+      .feed-page .user-profile-right .profile-area .user-language,
+      .feed-page .single-post-right .profile-area .user-email,
+      .feed-page .single-post-right .profile-area .user-first-name,
+      .feed-page .single-post-right .profile-area .user-last-name,
+      .feed-page .single-post-right .profile-area .user-last-name,
+      .feed-page .single-post-right .profile-area .user-uni-email,
+      .feed-page .single-post-right .profile-area .user-language,
+      .feed-page .feed-right .profile-area .user-email,
+      .feed-page .feed-right .profile-area .user-first-name,
+      .feed-page .feed-right .profile-area .user-last-name,
+      .feed-page .feed-right .profile-area .user-last-name,
+      .feed-page .feed-right .profile-area .user-uni-email,
+      .feed-page .feed-right .profile-area .user-language,
+      .feed-page .gullds-right .profile-area .user-email,
+      .feed-page .gullds-right .profile-area .user-first-name,
+      .feed-page .gullds-right .profile-area .user-last-name,
+      .feed-page .gullds-right .profile-area .user-last-name,
+      .feed-page .gullds-right .profile-area .user-uni-email,
+      .feed-page .gullds-right .profile-area .user-language {
+        width: 704px;
+        height: 84px;
+        margin-bottom: 44px; }
+        .user-profile-page .user-profile-right .profile-area .user-email .label,
+        .user-profile-page .user-profile-right .profile-area .user-first-name .label,
+        .user-profile-page .user-profile-right .profile-area .user-last-name .label,
+        .user-profile-page .user-profile-right .profile-area .user-last-name .label,
+        .user-profile-page .user-profile-right .profile-area .user-uni-email .label,
+        .user-profile-page .user-profile-right .profile-area .user-language .label,
+        .user-profile-page .single-post-right .profile-area .user-email .label,
+        .user-profile-page .single-post-right .profile-area .user-first-name .label,
+        .user-profile-page .single-post-right .profile-area .user-last-name .label,
+        .user-profile-page .single-post-right .profile-area .user-last-name .label,
+        .user-profile-page .single-post-right .profile-area .user-uni-email .label,
+        .user-profile-page .single-post-right .profile-area .user-language .label,
+        .user-profile-page .feed-right .profile-area .user-email .label,
+        .user-profile-page .feed-right .profile-area .user-first-name .label,
+        .user-profile-page .feed-right .profile-area .user-last-name .label,
+        .user-profile-page .feed-right .profile-area .user-last-name .label,
+        .user-profile-page .feed-right .profile-area .user-uni-email .label,
+        .user-profile-page .feed-right .profile-area .user-language .label,
+        .user-profile-page .gullds-right .profile-area .user-email .label,
+        .user-profile-page .gullds-right .profile-area .user-first-name .label,
+        .user-profile-page .gullds-right .profile-area .user-last-name .label,
+        .user-profile-page .gullds-right .profile-area .user-last-name .label,
+        .user-profile-page .gullds-right .profile-area .user-uni-email .label,
+        .user-profile-page .gullds-right .profile-area .user-language .label,
+        .gullds .user-profile-right .profile-area .user-email .label,
+        .gullds .user-profile-right .profile-area .user-first-name .label,
+        .gullds .user-profile-right .profile-area .user-last-name .label,
+        .gullds .user-profile-right .profile-area .user-last-name .label,
+        .gullds .user-profile-right .profile-area .user-uni-email .label,
+        .gullds .user-profile-right .profile-area .user-language .label,
+        .gullds .single-post-right .profile-area .user-email .label,
+        .gullds .single-post-right .profile-area .user-first-name .label,
+        .gullds .single-post-right .profile-area .user-last-name .label,
+        .gullds .single-post-right .profile-area .user-last-name .label,
+        .gullds .single-post-right .profile-area .user-uni-email .label,
+        .gullds .single-post-right .profile-area .user-language .label,
+        .gullds .feed-right .profile-area .user-email .label,
+        .gullds .feed-right .profile-area .user-first-name .label,
+        .gullds .feed-right .profile-area .user-last-name .label,
+        .gullds .feed-right .profile-area .user-last-name .label,
+        .gullds .feed-right .profile-area .user-uni-email .label,
+        .gullds .feed-right .profile-area .user-language .label,
+        .gullds .gullds-right .profile-area .user-email .label,
+        .gullds .gullds-right .profile-area .user-first-name .label,
+        .gullds .gullds-right .profile-area .user-last-name .label,
+        .gullds .gullds-right .profile-area .user-last-name .label,
+        .gullds .gullds-right .profile-area .user-uni-email .label,
+        .gullds .gullds-right .profile-area .user-language .label,
+        .single-post-1 .user-profile-right .profile-area .user-email .label,
+        .single-post-1 .user-profile-right .profile-area .user-first-name .label,
+        .single-post-1 .user-profile-right .profile-area .user-last-name .label,
+        .single-post-1 .user-profile-right .profile-area .user-last-name .label,
+        .single-post-1 .user-profile-right .profile-area .user-uni-email .label,
+        .single-post-1 .user-profile-right .profile-area .user-language .label,
+        .single-post-1 .single-post-right .profile-area .user-email .label,
+        .single-post-1 .single-post-right .profile-area .user-first-name .label,
+        .single-post-1 .single-post-right .profile-area .user-last-name .label,
+        .single-post-1 .single-post-right .profile-area .user-last-name .label,
+        .single-post-1 .single-post-right .profile-area .user-uni-email .label,
+        .single-post-1 .single-post-right .profile-area .user-language .label,
+        .single-post-1 .feed-right .profile-area .user-email .label,
+        .single-post-1 .feed-right .profile-area .user-first-name .label,
+        .single-post-1 .feed-right .profile-area .user-last-name .label,
+        .single-post-1 .feed-right .profile-area .user-last-name .label,
+        .single-post-1 .feed-right .profile-area .user-uni-email .label,
+        .single-post-1 .feed-right .profile-area .user-language .label,
+        .single-post-1 .gullds-right .profile-area .user-email .label,
+        .single-post-1 .gullds-right .profile-area .user-first-name .label,
+        .single-post-1 .gullds-right .profile-area .user-last-name .label,
+        .single-post-1 .gullds-right .profile-area .user-last-name .label,
+        .single-post-1 .gullds-right .profile-area .user-uni-email .label,
+        .single-post-1 .gullds-right .profile-area .user-language .label,
+        .feed-page .user-profile-right .profile-area .user-email .label,
+        .feed-page .user-profile-right .profile-area .user-first-name .label,
+        .feed-page .user-profile-right .profile-area .user-last-name .label,
+        .feed-page .user-profile-right .profile-area .user-last-name .label,
+        .feed-page .user-profile-right .profile-area .user-uni-email .label,
+        .feed-page .user-profile-right .profile-area .user-language .label,
+        .feed-page .single-post-right .profile-area .user-email .label,
+        .feed-page .single-post-right .profile-area .user-first-name .label,
+        .feed-page .single-post-right .profile-area .user-last-name .label,
+        .feed-page .single-post-right .profile-area .user-last-name .label,
+        .feed-page .single-post-right .profile-area .user-uni-email .label,
+        .feed-page .single-post-right .profile-area .user-language .label,
+        .feed-page .feed-right .profile-area .user-email .label,
+        .feed-page .feed-right .profile-area .user-first-name .label,
+        .feed-page .feed-right .profile-area .user-last-name .label,
+        .feed-page .feed-right .profile-area .user-last-name .label,
+        .feed-page .feed-right .profile-area .user-uni-email .label,
+        .feed-page .feed-right .profile-area .user-language .label,
+        .feed-page .gullds-right .profile-area .user-email .label,
+        .feed-page .gullds-right .profile-area .user-first-name .label,
+        .feed-page .gullds-right .profile-area .user-last-name .label,
+        .feed-page .gullds-right .profile-area .user-last-name .label,
+        .feed-page .gullds-right .profile-area .user-uni-email .label,
+        .feed-page .gullds-right .profile-area .user-language .label {
+          margin-bottom: 25px;
+          color: #6D6D6D; }
+        .user-profile-page .user-profile-right .profile-area .user-email .label-value,
+        .user-profile-page .user-profile-right .profile-area .user-first-name .label-value,
+        .user-profile-page .user-profile-right .profile-area .user-last-name .label-value,
+        .user-profile-page .user-profile-right .profile-area .user-last-name .label-value,
+        .user-profile-page .user-profile-right .profile-area .user-uni-email .label-value,
+        .user-profile-page .user-profile-right .profile-area .user-language .label-value,
+        .user-profile-page .single-post-right .profile-area .user-email .label-value,
+        .user-profile-page .single-post-right .profile-area .user-first-name .label-value,
+        .user-profile-page .single-post-right .profile-area .user-last-name .label-value,
+        .user-profile-page .single-post-right .profile-area .user-last-name .label-value,
+        .user-profile-page .single-post-right .profile-area .user-uni-email .label-value,
+        .user-profile-page .single-post-right .profile-area .user-language .label-value,
+        .user-profile-page .feed-right .profile-area .user-email .label-value,
+        .user-profile-page .feed-right .profile-area .user-first-name .label-value,
+        .user-profile-page .feed-right .profile-area .user-last-name .label-value,
+        .user-profile-page .feed-right .profile-area .user-last-name .label-value,
+        .user-profile-page .feed-right .profile-area .user-uni-email .label-value,
+        .user-profile-page .feed-right .profile-area .user-language .label-value,
+        .user-profile-page .gullds-right .profile-area .user-email .label-value,
+        .user-profile-page .gullds-right .profile-area .user-first-name .label-value,
+        .user-profile-page .gullds-right .profile-area .user-last-name .label-value,
+        .user-profile-page .gullds-right .profile-area .user-last-name .label-value,
+        .user-profile-page .gullds-right .profile-area .user-uni-email .label-value,
+        .user-profile-page .gullds-right .profile-area .user-language .label-value,
+        .gullds .user-profile-right .profile-area .user-email .label-value,
+        .gullds .user-profile-right .profile-area .user-first-name .label-value,
+        .gullds .user-profile-right .profile-area .user-last-name .label-value,
+        .gullds .user-profile-right .profile-area .user-last-name .label-value,
+        .gullds .user-profile-right .profile-area .user-uni-email .label-value,
+        .gullds .user-profile-right .profile-area .user-language .label-value,
+        .gullds .single-post-right .profile-area .user-email .label-value,
+        .gullds .single-post-right .profile-area .user-first-name .label-value,
+        .gullds .single-post-right .profile-area .user-last-name .label-value,
+        .gullds .single-post-right .profile-area .user-last-name .label-value,
+        .gullds .single-post-right .profile-area .user-uni-email .label-value,
+        .gullds .single-post-right .profile-area .user-language .label-value,
+        .gullds .feed-right .profile-area .user-email .label-value,
+        .gullds .feed-right .profile-area .user-first-name .label-value,
+        .gullds .feed-right .profile-area .user-last-name .label-value,
+        .gullds .feed-right .profile-area .user-last-name .label-value,
+        .gullds .feed-right .profile-area .user-uni-email .label-value,
+        .gullds .feed-right .profile-area .user-language .label-value,
+        .gullds .gullds-right .profile-area .user-email .label-value,
+        .gullds .gullds-right .profile-area .user-first-name .label-value,
+        .gullds .gullds-right .profile-area .user-last-name .label-value,
+        .gullds .gullds-right .profile-area .user-last-name .label-value,
+        .gullds .gullds-right .profile-area .user-uni-email .label-value,
+        .gullds .gullds-right .profile-area .user-language .label-value,
+        .single-post-1 .user-profile-right .profile-area .user-email .label-value,
+        .single-post-1 .user-profile-right .profile-area .user-first-name .label-value,
+        .single-post-1 .user-profile-right .profile-area .user-last-name .label-value,
+        .single-post-1 .user-profile-right .profile-area .user-last-name .label-value,
+        .single-post-1 .user-profile-right .profile-area .user-uni-email .label-value,
+        .single-post-1 .user-profile-right .profile-area .user-language .label-value,
+        .single-post-1 .single-post-right .profile-area .user-email .label-value,
+        .single-post-1 .single-post-right .profile-area .user-first-name .label-value,
+        .single-post-1 .single-post-right .profile-area .user-last-name .label-value,
+        .single-post-1 .single-post-right .profile-area .user-last-name .label-value,
+        .single-post-1 .single-post-right .profile-area .user-uni-email .label-value,
+        .single-post-1 .single-post-right .profile-area .user-language .label-value,
+        .single-post-1 .feed-right .profile-area .user-email .label-value,
+        .single-post-1 .feed-right .profile-area .user-first-name .label-value,
+        .single-post-1 .feed-right .profile-area .user-last-name .label-value,
+        .single-post-1 .feed-right .profile-area .user-last-name .label-value,
+        .single-post-1 .feed-right .profile-area .user-uni-email .label-value,
+        .single-post-1 .feed-right .profile-area .user-language .label-value,
+        .single-post-1 .gullds-right .profile-area .user-email .label-value,
+        .single-post-1 .gullds-right .profile-area .user-first-name .label-value,
+        .single-post-1 .gullds-right .profile-area .user-last-name .label-value,
+        .single-post-1 .gullds-right .profile-area .user-last-name .label-value,
+        .single-post-1 .gullds-right .profile-area .user-uni-email .label-value,
+        .single-post-1 .gullds-right .profile-area .user-language .label-value,
+        .feed-page .user-profile-right .profile-area .user-email .label-value,
+        .feed-page .user-profile-right .profile-area .user-first-name .label-value,
+        .feed-page .user-profile-right .profile-area .user-last-name .label-value,
+        .feed-page .user-profile-right .profile-area .user-last-name .label-value,
+        .feed-page .user-profile-right .profile-area .user-uni-email .label-value,
+        .feed-page .user-profile-right .profile-area .user-language .label-value,
+        .feed-page .single-post-right .profile-area .user-email .label-value,
+        .feed-page .single-post-right .profile-area .user-first-name .label-value,
+        .feed-page .single-post-right .profile-area .user-last-name .label-value,
+        .feed-page .single-post-right .profile-area .user-last-name .label-value,
+        .feed-page .single-post-right .profile-area .user-uni-email .label-value,
+        .feed-page .single-post-right .profile-area .user-language .label-value,
+        .feed-page .feed-right .profile-area .user-email .label-value,
+        .feed-page .feed-right .profile-area .user-first-name .label-value,
+        .feed-page .feed-right .profile-area .user-last-name .label-value,
+        .feed-page .feed-right .profile-area .user-last-name .label-value,
+        .feed-page .feed-right .profile-area .user-uni-email .label-value,
+        .feed-page .feed-right .profile-area .user-language .label-value,
+        .feed-page .gullds-right .profile-area .user-email .label-value,
+        .feed-page .gullds-right .profile-area .user-first-name .label-value,
+        .feed-page .gullds-right .profile-area .user-last-name .label-value,
+        .feed-page .gullds-right .profile-area .user-last-name .label-value,
+        .feed-page .gullds-right .profile-area .user-uni-email .label-value,
+        .feed-page .gullds-right .profile-area .user-language .label-value {
+          display: flex;
+          justify-content: space-between;
+          height: 50px;
+          margin-left: 26px; }
+          .user-profile-page .user-profile-right .profile-area .user-email .label-value .green-tick img,
+          .user-profile-page .user-profile-right .profile-area .user-first-name .label-value .green-tick img,
+          .user-profile-page .user-profile-right .profile-area .user-last-name .label-value .green-tick img,
+          .user-profile-page .user-profile-right .profile-area .user-last-name .label-value .green-tick img,
+          .user-profile-page .user-profile-right .profile-area .user-uni-email .label-value .green-tick img,
+          .user-profile-page .user-profile-right .profile-area .user-language .label-value .green-tick img,
+          .user-profile-page .single-post-right .profile-area .user-email .label-value .green-tick img,
+          .user-profile-page .single-post-right .profile-area .user-first-name .label-value .green-tick img,
+          .user-profile-page .single-post-right .profile-area .user-last-name .label-value .green-tick img,
+          .user-profile-page .single-post-right .profile-area .user-last-name .label-value .green-tick img,
+          .user-profile-page .single-post-right .profile-area .user-uni-email .label-value .green-tick img,
+          .user-profile-page .single-post-right .profile-area .user-language .label-value .green-tick img,
+          .user-profile-page .feed-right .profile-area .user-email .label-value .green-tick img,
+          .user-profile-page .feed-right .profile-area .user-first-name .label-value .green-tick img,
+          .user-profile-page .feed-right .profile-area .user-last-name .label-value .green-tick img,
+          .user-profile-page .feed-right .profile-area .user-last-name .label-value .green-tick img,
+          .user-profile-page .feed-right .profile-area .user-uni-email .label-value .green-tick img,
+          .user-profile-page .feed-right .profile-area .user-language .label-value .green-tick img,
+          .user-profile-page .gullds-right .profile-area .user-email .label-value .green-tick img,
+          .user-profile-page .gullds-right .profile-area .user-first-name .label-value .green-tick img,
+          .user-profile-page .gullds-right .profile-area .user-last-name .label-value .green-tick img,
+          .user-profile-page .gullds-right .profile-area .user-last-name .label-value .green-tick img,
+          .user-profile-page .gullds-right .profile-area .user-uni-email .label-value .green-tick img,
+          .user-profile-page .gullds-right .profile-area .user-language .label-value .green-tick img,
+          .gullds .user-profile-right .profile-area .user-email .label-value .green-tick img,
+          .gullds .user-profile-right .profile-area .user-first-name .label-value .green-tick img,
+          .gullds .user-profile-right .profile-area .user-last-name .label-value .green-tick img,
+          .gullds .user-profile-right .profile-area .user-last-name .label-value .green-tick img,
+          .gullds .user-profile-right .profile-area .user-uni-email .label-value .green-tick img,
+          .gullds .user-profile-right .profile-area .user-language .label-value .green-tick img,
+          .gullds .single-post-right .profile-area .user-email .label-value .green-tick img,
+          .gullds .single-post-right .profile-area .user-first-name .label-value .green-tick img,
+          .gullds .single-post-right .profile-area .user-last-name .label-value .green-tick img,
+          .gullds .single-post-right .profile-area .user-last-name .label-value .green-tick img,
+          .gullds .single-post-right .profile-area .user-uni-email .label-value .green-tick img,
+          .gullds .single-post-right .profile-area .user-language .label-value .green-tick img,
+          .gullds .feed-right .profile-area .user-email .label-value .green-tick img,
+          .gullds .feed-right .profile-area .user-first-name .label-value .green-tick img,
+          .gullds .feed-right .profile-area .user-last-name .label-value .green-tick img,
+          .gullds .feed-right .profile-area .user-last-name .label-value .green-tick img,
+          .gullds .feed-right .profile-area .user-uni-email .label-value .green-tick img,
+          .gullds .feed-right .profile-area .user-language .label-value .green-tick img,
+          .gullds .gullds-right .profile-area .user-email .label-value .green-tick img,
+          .gullds .gullds-right .profile-area .user-first-name .label-value .green-tick img,
+          .gullds .gullds-right .profile-area .user-last-name .label-value .green-tick img,
+          .gullds .gullds-right .profile-area .user-last-name .label-value .green-tick img,
+          .gullds .gullds-right .profile-area .user-uni-email .label-value .green-tick img,
+          .gullds .gullds-right .profile-area .user-language .label-value .green-tick img,
+          .single-post-1 .user-profile-right .profile-area .user-email .label-value .green-tick img,
+          .single-post-1 .user-profile-right .profile-area .user-first-name .label-value .green-tick img,
+          .single-post-1 .user-profile-right .profile-area .user-last-name .label-value .green-tick img,
+          .single-post-1 .user-profile-right .profile-area .user-last-name .label-value .green-tick img,
+          .single-post-1 .user-profile-right .profile-area .user-uni-email .label-value .green-tick img,
+          .single-post-1 .user-profile-right .profile-area .user-language .label-value .green-tick img,
+          .single-post-1 .single-post-right .profile-area .user-email .label-value .green-tick img,
+          .single-post-1 .single-post-right .profile-area .user-first-name .label-value .green-tick img,
+          .single-post-1 .single-post-right .profile-area .user-last-name .label-value .green-tick img,
+          .single-post-1 .single-post-right .profile-area .user-last-name .label-value .green-tick img,
+          .single-post-1 .single-post-right .profile-area .user-uni-email .label-value .green-tick img,
+          .single-post-1 .single-post-right .profile-area .user-language .label-value .green-tick img,
+          .single-post-1 .feed-right .profile-area .user-email .label-value .green-tick img,
+          .single-post-1 .feed-right .profile-area .user-first-name .label-value .green-tick img,
+          .single-post-1 .feed-right .profile-area .user-last-name .label-value .green-tick img,
+          .single-post-1 .feed-right .profile-area .user-last-name .label-value .green-tick img,
+          .single-post-1 .feed-right .profile-area .user-uni-email .label-value .green-tick img,
+          .single-post-1 .feed-right .profile-area .user-language .label-value .green-tick img,
+          .single-post-1 .gullds-right .profile-area .user-email .label-value .green-tick img,
+          .single-post-1 .gullds-right .profile-area .user-first-name .label-value .green-tick img,
+          .single-post-1 .gullds-right .profile-area .user-last-name .label-value .green-tick img,
+          .single-post-1 .gullds-right .profile-area .user-last-name .label-value .green-tick img,
+          .single-post-1 .gullds-right .profile-area .user-uni-email .label-value .green-tick img,
+          .single-post-1 .gullds-right .profile-area .user-language .label-value .green-tick img,
+          .feed-page .user-profile-right .profile-area .user-email .label-value .green-tick img,
+          .feed-page .user-profile-right .profile-area .user-first-name .label-value .green-tick img,
+          .feed-page .user-profile-right .profile-area .user-last-name .label-value .green-tick img,
+          .feed-page .user-profile-right .profile-area .user-last-name .label-value .green-tick img,
+          .feed-page .user-profile-right .profile-area .user-uni-email .label-value .green-tick img,
+          .feed-page .user-profile-right .profile-area .user-language .label-value .green-tick img,
+          .feed-page .single-post-right .profile-area .user-email .label-value .green-tick img,
+          .feed-page .single-post-right .profile-area .user-first-name .label-value .green-tick img,
+          .feed-page .single-post-right .profile-area .user-last-name .label-value .green-tick img,
+          .feed-page .single-post-right .profile-area .user-last-name .label-value .green-tick img,
+          .feed-page .single-post-right .profile-area .user-uni-email .label-value .green-tick img,
+          .feed-page .single-post-right .profile-area .user-language .label-value .green-tick img,
+          .feed-page .feed-right .profile-area .user-email .label-value .green-tick img,
+          .feed-page .feed-right .profile-area .user-first-name .label-value .green-tick img,
+          .feed-page .feed-right .profile-area .user-last-name .label-value .green-tick img,
+          .feed-page .feed-right .profile-area .user-last-name .label-value .green-tick img,
+          .feed-page .feed-right .profile-area .user-uni-email .label-value .green-tick img,
+          .feed-page .feed-right .profile-area .user-language .label-value .green-tick img,
+          .feed-page .gullds-right .profile-area .user-email .label-value .green-tick img,
+          .feed-page .gullds-right .profile-area .user-first-name .label-value .green-tick img,
+          .feed-page .gullds-right .profile-area .user-last-name .label-value .green-tick img,
+          .feed-page .gullds-right .profile-area .user-last-name .label-value .green-tick img,
+          .feed-page .gullds-right .profile-area .user-uni-email .label-value .green-tick img,
+          .feed-page .gullds-right .profile-area .user-language .label-value .green-tick img {
+            width: 18px;
+            height: 18px; }
+      .user-profile-page .user-profile-right .profile-area .user-language,
+      .user-profile-page .single-post-right .profile-area .user-language,
+      .user-profile-page .feed-right .profile-area .user-language,
+      .user-profile-page .gullds-right .profile-area .user-language,
+      .gullds .user-profile-right .profile-area .user-language,
+      .gullds .single-post-right .profile-area .user-language,
+      .gullds .feed-right .profile-area .user-language,
+      .gullds .gullds-right .profile-area .user-language,
+      .single-post-1 .user-profile-right .profile-area .user-language,
+      .single-post-1 .single-post-right .profile-area .user-language,
+      .single-post-1 .feed-right .profile-area .user-language,
+      .single-post-1 .gullds-right .profile-area .user-language,
+      .feed-page .user-profile-right .profile-area .user-language,
+      .feed-page .single-post-right .profile-area .user-language,
+      .feed-page .feed-right .profile-area .user-language,
+      .feed-page .gullds-right .profile-area .user-language {
+        margin-bottom: 0px; }
+    .user-profile-page .user-profile-right .gullds-blocks,
+    .user-profile-page .user-profile-right .feed-post-block,
+    .user-profile-page .single-post-right .gullds-blocks,
+    .user-profile-page .single-post-right .feed-post-block,
+    .user-profile-page .feed-right .gullds-blocks,
+    .user-profile-page .feed-right .feed-post-block,
+    .user-profile-page .gullds-right .gullds-blocks,
+    .user-profile-page .gullds-right .feed-post-block,
+    .gullds .user-profile-right .gullds-blocks,
+    .gullds .user-profile-right .feed-post-block,
+    .gullds .single-post-right .gullds-blocks,
+    .gullds .single-post-right .feed-post-block,
+    .gullds .feed-right .gullds-blocks,
+    .gullds .feed-right .feed-post-block,
+    .gullds .gullds-right .gullds-blocks,
+    .gullds .gullds-right .feed-post-block,
+    .single-post-1 .user-profile-right .gullds-blocks,
+    .single-post-1 .user-profile-right .feed-post-block,
+    .single-post-1 .single-post-right .gullds-blocks,
+    .single-post-1 .single-post-right .feed-post-block,
+    .single-post-1 .feed-right .gullds-blocks,
+    .single-post-1 .feed-right .feed-post-block,
+    .single-post-1 .gullds-right .gullds-blocks,
+    .single-post-1 .gullds-right .feed-post-block,
+    .feed-page .user-profile-right .gullds-blocks,
+    .feed-page .user-profile-right .feed-post-block,
+    .feed-page .single-post-right .gullds-blocks,
+    .feed-page .single-post-right .feed-post-block,
+    .feed-page .feed-right .gullds-blocks,
+    .feed-page .feed-right .feed-post-block,
+    .feed-page .gullds-right .gullds-blocks,
+    .feed-page .gullds-right .feed-post-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(1fr, 4);
+      grid-gap: 17px; }
+      .user-profile-page .user-profile-right .gullds-blocks .block,
+      .user-profile-page .user-profile-right .feed-post-block .block,
+      .user-profile-page .single-post-right .gullds-blocks .block,
+      .user-profile-page .single-post-right .feed-post-block .block,
+      .user-profile-page .feed-right .gullds-blocks .block,
+      .user-profile-page .feed-right .feed-post-block .block,
+      .user-profile-page .gullds-right .gullds-blocks .block,
+      .user-profile-page .gullds-right .feed-post-block .block,
+      .gullds .user-profile-right .gullds-blocks .block,
+      .gullds .user-profile-right .feed-post-block .block,
+      .gullds .single-post-right .gullds-blocks .block,
+      .gullds .single-post-right .feed-post-block .block,
+      .gullds .feed-right .gullds-blocks .block,
+      .gullds .feed-right .feed-post-block .block,
+      .gullds .gullds-right .gullds-blocks .block,
+      .gullds .gullds-right .feed-post-block .block,
+      .single-post-1 .user-profile-right .gullds-blocks .block,
+      .single-post-1 .user-profile-right .feed-post-block .block,
+      .single-post-1 .single-post-right .gullds-blocks .block,
+      .single-post-1 .single-post-right .feed-post-block .block,
+      .single-post-1 .feed-right .gullds-blocks .block,
+      .single-post-1 .feed-right .feed-post-block .block,
+      .single-post-1 .gullds-right .gullds-blocks .block,
+      .single-post-1 .gullds-right .feed-post-block .block,
+      .feed-page .user-profile-right .gullds-blocks .block,
+      .feed-page .user-profile-right .feed-post-block .block,
+      .feed-page .single-post-right .gullds-blocks .block,
+      .feed-page .single-post-right .feed-post-block .block,
+      .feed-page .feed-right .gullds-blocks .block,
+      .feed-page .feed-right .feed-post-block .block,
+      .feed-page .gullds-right .gullds-blocks .block,
+      .feed-page .gullds-right .feed-post-block .block {
+        width: 100%;
+        padding: 25px 17px 21px 19px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 10px 2px #CACACA; }
+        .user-profile-page .user-profile-right .gullds-blocks .block .block-label,
+        .user-profile-page .user-profile-right .feed-post-block .block .block-label,
+        .user-profile-page .single-post-right .gullds-blocks .block .block-label,
+        .user-profile-page .single-post-right .feed-post-block .block .block-label,
+        .user-profile-page .feed-right .gullds-blocks .block .block-label,
+        .user-profile-page .feed-right .feed-post-block .block .block-label,
+        .user-profile-page .gullds-right .gullds-blocks .block .block-label,
+        .user-profile-page .gullds-right .feed-post-block .block .block-label,
+        .gullds .user-profile-right .gullds-blocks .block .block-label,
+        .gullds .user-profile-right .feed-post-block .block .block-label,
+        .gullds .single-post-right .gullds-blocks .block .block-label,
+        .gullds .single-post-right .feed-post-block .block .block-label,
+        .gullds .feed-right .gullds-blocks .block .block-label,
+        .gullds .feed-right .feed-post-block .block .block-label,
+        .gullds .gullds-right .gullds-blocks .block .block-label,
+        .gullds .gullds-right .feed-post-block .block .block-label,
+        .single-post-1 .user-profile-right .gullds-blocks .block .block-label,
+        .single-post-1 .user-profile-right .feed-post-block .block .block-label,
+        .single-post-1 .single-post-right .gullds-blocks .block .block-label,
+        .single-post-1 .single-post-right .feed-post-block .block .block-label,
+        .single-post-1 .feed-right .gullds-blocks .block .block-label,
+        .single-post-1 .feed-right .feed-post-block .block .block-label,
+        .single-post-1 .gullds-right .gullds-blocks .block .block-label,
+        .single-post-1 .gullds-right .feed-post-block .block .block-label,
+        .feed-page .user-profile-right .gullds-blocks .block .block-label,
+        .feed-page .user-profile-right .feed-post-block .block .block-label,
+        .feed-page .single-post-right .gullds-blocks .block .block-label,
+        .feed-page .single-post-right .feed-post-block .block .block-label,
+        .feed-page .feed-right .gullds-blocks .block .block-label,
+        .feed-page .feed-right .feed-post-block .block .block-label,
+        .feed-page .gullds-right .gullds-blocks .block .block-label,
+        .feed-page .gullds-right .feed-post-block .block .block-label {
+          font-size: 20px;
+          font-family: Avenir-Heavy;
+          margin-bottom: 15px;
+          color: #000000;
+          display: flex; }
+          .user-profile-page .user-profile-right .gullds-blocks .block .block-label img,
+          .user-profile-page .user-profile-right .feed-post-block .block .block-label img,
+          .user-profile-page .single-post-right .gullds-blocks .block .block-label img,
+          .user-profile-page .single-post-right .feed-post-block .block .block-label img,
+          .user-profile-page .feed-right .gullds-blocks .block .block-label img,
+          .user-profile-page .feed-right .feed-post-block .block .block-label img,
+          .user-profile-page .gullds-right .gullds-blocks .block .block-label img,
+          .user-profile-page .gullds-right .feed-post-block .block .block-label img,
+          .gullds .user-profile-right .gullds-blocks .block .block-label img,
+          .gullds .user-profile-right .feed-post-block .block .block-label img,
+          .gullds .single-post-right .gullds-blocks .block .block-label img,
+          .gullds .single-post-right .feed-post-block .block .block-label img,
+          .gullds .feed-right .gullds-blocks .block .block-label img,
+          .gullds .feed-right .feed-post-block .block .block-label img,
+          .gullds .gullds-right .gullds-blocks .block .block-label img,
+          .gullds .gullds-right .feed-post-block .block .block-label img,
+          .single-post-1 .user-profile-right .gullds-blocks .block .block-label img,
+          .single-post-1 .user-profile-right .feed-post-block .block .block-label img,
+          .single-post-1 .single-post-right .gullds-blocks .block .block-label img,
+          .single-post-1 .single-post-right .feed-post-block .block .block-label img,
+          .single-post-1 .feed-right .gullds-blocks .block .block-label img,
+          .single-post-1 .feed-right .feed-post-block .block .block-label img,
+          .single-post-1 .gullds-right .gullds-blocks .block .block-label img,
+          .single-post-1 .gullds-right .feed-post-block .block .block-label img,
+          .feed-page .user-profile-right .gullds-blocks .block .block-label img,
+          .feed-page .user-profile-right .feed-post-block .block .block-label img,
+          .feed-page .single-post-right .gullds-blocks .block .block-label img,
+          .feed-page .single-post-right .feed-post-block .block .block-label img,
+          .feed-page .feed-right .gullds-blocks .block .block-label img,
+          .feed-page .feed-right .feed-post-block .block .block-label img,
+          .feed-page .gullds-right .gullds-blocks .block .block-label img,
+          .feed-page .gullds-right .feed-post-block .block .block-label img {
+            width: 22px;
+            height: 5px;
+            margin-left: auto; }
+        .user-profile-page .user-profile-right .gullds-blocks .block .comments,
+        .user-profile-page .user-profile-right .feed-post-block .block .comments,
+        .user-profile-page .single-post-right .gullds-blocks .block .comments,
+        .user-profile-page .single-post-right .feed-post-block .block .comments,
+        .user-profile-page .feed-right .gullds-blocks .block .comments,
+        .user-profile-page .feed-right .feed-post-block .block .comments,
+        .user-profile-page .gullds-right .gullds-blocks .block .comments,
+        .user-profile-page .gullds-right .feed-post-block .block .comments,
+        .gullds .user-profile-right .gullds-blocks .block .comments,
+        .gullds .user-profile-right .feed-post-block .block .comments,
+        .gullds .single-post-right .gullds-blocks .block .comments,
+        .gullds .single-post-right .feed-post-block .block .comments,
+        .gullds .feed-right .gullds-blocks .block .comments,
+        .gullds .feed-right .feed-post-block .block .comments,
+        .gullds .gullds-right .gullds-blocks .block .comments,
+        .gullds .gullds-right .feed-post-block .block .comments,
+        .single-post-1 .user-profile-right .gullds-blocks .block .comments,
+        .single-post-1 .user-profile-right .feed-post-block .block .comments,
+        .single-post-1 .single-post-right .gullds-blocks .block .comments,
+        .single-post-1 .single-post-right .feed-post-block .block .comments,
+        .single-post-1 .feed-right .gullds-blocks .block .comments,
+        .single-post-1 .feed-right .feed-post-block .block .comments,
+        .single-post-1 .gullds-right .gullds-blocks .block .comments,
+        .single-post-1 .gullds-right .feed-post-block .block .comments,
+        .feed-page .user-profile-right .gullds-blocks .block .comments,
+        .feed-page .user-profile-right .feed-post-block .block .comments,
+        .feed-page .single-post-right .gullds-blocks .block .comments,
+        .feed-page .single-post-right .feed-post-block .block .comments,
+        .feed-page .feed-right .gullds-blocks .block .comments,
+        .feed-page .feed-right .feed-post-block .block .comments,
+        .feed-page .gullds-right .gullds-blocks .block .comments,
+        .feed-page .gullds-right .feed-post-block .block .comments {
+          display: flex;
+          grid-gap: 6px; }
+        .user-profile-page .user-profile-right .gullds-blocks .block .bookmark,
+        .user-profile-page .user-profile-right .feed-post-block .block .bookmark,
+        .user-profile-page .single-post-right .gullds-blocks .block .bookmark,
+        .user-profile-page .single-post-right .feed-post-block .block .bookmark,
+        .user-profile-page .feed-right .gullds-blocks .block .bookmark,
+        .user-profile-page .feed-right .feed-post-block .block .bookmark,
+        .user-profile-page .gullds-right .gullds-blocks .block .bookmark,
+        .user-profile-page .gullds-right .feed-post-block .block .bookmark,
+        .gullds .user-profile-right .gullds-blocks .block .bookmark,
+        .gullds .user-profile-right .feed-post-block .block .bookmark,
+        .gullds .single-post-right .gullds-blocks .block .bookmark,
+        .gullds .single-post-right .feed-post-block .block .bookmark,
+        .gullds .feed-right .gullds-blocks .block .bookmark,
+        .gullds .feed-right .feed-post-block .block .bookmark,
+        .gullds .gullds-right .gullds-blocks .block .bookmark,
+        .gullds .gullds-right .feed-post-block .block .bookmark,
+        .single-post-1 .user-profile-right .gullds-blocks .block .bookmark,
+        .single-post-1 .user-profile-right .feed-post-block .block .bookmark,
+        .single-post-1 .single-post-right .gullds-blocks .block .bookmark,
+        .single-post-1 .single-post-right .feed-post-block .block .bookmark,
+        .single-post-1 .feed-right .gullds-blocks .block .bookmark,
+        .single-post-1 .feed-right .feed-post-block .block .bookmark,
+        .single-post-1 .gullds-right .gullds-blocks .block .bookmark,
+        .single-post-1 .gullds-right .feed-post-block .block .bookmark,
+        .feed-page .user-profile-right .gullds-blocks .block .bookmark,
+        .feed-page .user-profile-right .feed-post-block .block .bookmark,
+        .feed-page .single-post-right .gullds-blocks .block .bookmark,
+        .feed-page .single-post-right .feed-post-block .block .bookmark,
+        .feed-page .feed-right .gullds-blocks .block .bookmark,
+        .feed-page .feed-right .feed-post-block .block .bookmark,
+        .feed-page .gullds-right .gullds-blocks .block .bookmark,
+        .feed-page .gullds-right .feed-post-block .block .bookmark {
+          margin-left: auto; }
+        .user-profile-page .user-profile-right .gullds-blocks .block .block-content,
+        .user-profile-page .user-profile-right .feed-post-block .block .block-content,
+        .user-profile-page .single-post-right .gullds-blocks .block .block-content,
+        .user-profile-page .single-post-right .feed-post-block .block .block-content,
+        .user-profile-page .feed-right .gullds-blocks .block .block-content,
+        .user-profile-page .feed-right .feed-post-block .block .block-content,
+        .user-profile-page .gullds-right .gullds-blocks .block .block-content,
+        .user-profile-page .gullds-right .feed-post-block .block .block-content,
+        .gullds .user-profile-right .gullds-blocks .block .block-content,
+        .gullds .user-profile-right .feed-post-block .block .block-content,
+        .gullds .single-post-right .gullds-blocks .block .block-content,
+        .gullds .single-post-right .feed-post-block .block .block-content,
+        .gullds .feed-right .gullds-blocks .block .block-content,
+        .gullds .feed-right .feed-post-block .block .block-content,
+        .gullds .gullds-right .gullds-blocks .block .block-content,
+        .gullds .gullds-right .feed-post-block .block .block-content,
+        .single-post-1 .user-profile-right .gullds-blocks .block .block-content,
+        .single-post-1 .user-profile-right .feed-post-block .block .block-content,
+        .single-post-1 .single-post-right .gullds-blocks .block .block-content,
+        .single-post-1 .single-post-right .feed-post-block .block .block-content,
+        .single-post-1 .feed-right .gullds-blocks .block .block-content,
+        .single-post-1 .feed-right .feed-post-block .block .block-content,
+        .single-post-1 .gullds-right .gullds-blocks .block .block-content,
+        .single-post-1 .gullds-right .feed-post-block .block .block-content,
+        .feed-page .user-profile-right .gullds-blocks .block .block-content,
+        .feed-page .user-profile-right .feed-post-block .block .block-content,
+        .feed-page .single-post-right .gullds-blocks .block .block-content,
+        .feed-page .single-post-right .feed-post-block .block .block-content,
+        .feed-page .feed-right .gullds-blocks .block .block-content,
+        .feed-page .feed-right .feed-post-block .block .block-content,
+        .feed-page .gullds-right .gullds-blocks .block .block-content,
+        .feed-page .gullds-right .feed-post-block .block .block-content {
+          color: #393939;
+          margin-bottom: 19px; }
+        .user-profile-page .user-profile-right .gullds-blocks .block .block-img img,
+        .user-profile-page .user-profile-right .feed-post-block .block .block-img img,
+        .user-profile-page .single-post-right .gullds-blocks .block .block-img img,
+        .user-profile-page .single-post-right .feed-post-block .block .block-img img,
+        .user-profile-page .feed-right .gullds-blocks .block .block-img img,
+        .user-profile-page .feed-right .feed-post-block .block .block-img img,
+        .user-profile-page .gullds-right .gullds-blocks .block .block-img img,
+        .user-profile-page .gullds-right .feed-post-block .block .block-img img,
+        .gullds .user-profile-right .gullds-blocks .block .block-img img,
+        .gullds .user-profile-right .feed-post-block .block .block-img img,
+        .gullds .single-post-right .gullds-blocks .block .block-img img,
+        .gullds .single-post-right .feed-post-block .block .block-img img,
+        .gullds .feed-right .gullds-blocks .block .block-img img,
+        .gullds .feed-right .feed-post-block .block .block-img img,
+        .gullds .gullds-right .gullds-blocks .block .block-img img,
+        .gullds .gullds-right .feed-post-block .block .block-img img,
+        .single-post-1 .user-profile-right .gullds-blocks .block .block-img img,
+        .single-post-1 .user-profile-right .feed-post-block .block .block-img img,
+        .single-post-1 .single-post-right .gullds-blocks .block .block-img img,
+        .single-post-1 .single-post-right .feed-post-block .block .block-img img,
+        .single-post-1 .feed-right .gullds-blocks .block .block-img img,
+        .single-post-1 .feed-right .feed-post-block .block .block-img img,
+        .single-post-1 .gullds-right .gullds-blocks .block .block-img img,
+        .single-post-1 .gullds-right .feed-post-block .block .block-img img,
+        .feed-page .user-profile-right .gullds-blocks .block .block-img img,
+        .feed-page .user-profile-right .feed-post-block .block .block-img img,
+        .feed-page .single-post-right .gullds-blocks .block .block-img img,
+        .feed-page .single-post-right .feed-post-block .block .block-img img,
+        .feed-page .feed-right .gullds-blocks .block .block-img img,
+        .feed-page .feed-right .feed-post-block .block .block-img img,
+        .feed-page .gullds-right .gullds-blocks .block .block-img img,
+        .feed-page .gullds-right .feed-post-block .block .block-img img {
+          object-fit: cover;
+          width: 100%;
+          height: 50%; }
+        .user-profile-page .user-profile-right .gullds-blocks .block .block-button,
+        .user-profile-page .user-profile-right .feed-post-block .block .block-button,
+        .user-profile-page .single-post-right .gullds-blocks .block .block-button,
+        .user-profile-page .single-post-right .feed-post-block .block .block-button,
+        .user-profile-page .feed-right .gullds-blocks .block .block-button,
+        .user-profile-page .feed-right .feed-post-block .block .block-button,
+        .user-profile-page .gullds-right .gullds-blocks .block .block-button,
+        .user-profile-page .gullds-right .feed-post-block .block .block-button,
+        .gullds .user-profile-right .gullds-blocks .block .block-button,
+        .gullds .user-profile-right .feed-post-block .block .block-button,
+        .gullds .single-post-right .gullds-blocks .block .block-button,
+        .gullds .single-post-right .feed-post-block .block .block-button,
+        .gullds .feed-right .gullds-blocks .block .block-button,
+        .gullds .feed-right .feed-post-block .block .block-button,
+        .gullds .gullds-right .gullds-blocks .block .block-button,
+        .gullds .gullds-right .feed-post-block .block .block-button,
+        .single-post-1 .user-profile-right .gullds-blocks .block .block-button,
+        .single-post-1 .user-profile-right .feed-post-block .block .block-button,
+        .single-post-1 .single-post-right .gullds-blocks .block .block-button,
+        .single-post-1 .single-post-right .feed-post-block .block .block-button,
+        .single-post-1 .feed-right .gullds-blocks .block .block-button,
+        .single-post-1 .feed-right .feed-post-block .block .block-button,
+        .single-post-1 .gullds-right .gullds-blocks .block .block-button,
+        .single-post-1 .gullds-right .feed-post-block .block .block-button,
+        .feed-page .user-profile-right .gullds-blocks .block .block-button,
+        .feed-page .user-profile-right .feed-post-block .block .block-button,
+        .feed-page .single-post-right .gullds-blocks .block .block-button,
+        .feed-page .single-post-right .feed-post-block .block .block-button,
+        .feed-page .feed-right .gullds-blocks .block .block-button,
+        .feed-page .feed-right .feed-post-block .block .block-button,
+        .feed-page .gullds-right .gullds-blocks .block .block-button,
+        .feed-page .gullds-right .feed-post-block .block .block-button {
+          width: 140px; }
+          .user-profile-page .user-profile-right .gullds-blocks .block .block-button button,
+          .user-profile-page .user-profile-right .feed-post-block .block .block-button button,
+          .user-profile-page .single-post-right .gullds-blocks .block .block-button button,
+          .user-profile-page .single-post-right .feed-post-block .block .block-button button,
+          .user-profile-page .feed-right .gullds-blocks .block .block-button button,
+          .user-profile-page .feed-right .feed-post-block .block .block-button button,
+          .user-profile-page .gullds-right .gullds-blocks .block .block-button button,
+          .user-profile-page .gullds-right .feed-post-block .block .block-button button,
+          .gullds .user-profile-right .gullds-blocks .block .block-button button,
+          .gullds .user-profile-right .feed-post-block .block .block-button button,
+          .gullds .single-post-right .gullds-blocks .block .block-button button,
+          .gullds .single-post-right .feed-post-block .block .block-button button,
+          .gullds .feed-right .gullds-blocks .block .block-button button,
+          .gullds .feed-right .feed-post-block .block .block-button button,
+          .gullds .gullds-right .gullds-blocks .block .block-button button,
+          .gullds .gullds-right .feed-post-block .block .block-button button,
+          .single-post-1 .user-profile-right .gullds-blocks .block .block-button button,
+          .single-post-1 .user-profile-right .feed-post-block .block .block-button button,
+          .single-post-1 .single-post-right .gullds-blocks .block .block-button button,
+          .single-post-1 .single-post-right .feed-post-block .block .block-button button,
+          .single-post-1 .feed-right .gullds-blocks .block .block-button button,
+          .single-post-1 .feed-right .feed-post-block .block .block-button button,
+          .single-post-1 .gullds-right .gullds-blocks .block .block-button button,
+          .single-post-1 .gullds-right .feed-post-block .block .block-button button,
+          .feed-page .user-profile-right .gullds-blocks .block .block-button button,
+          .feed-page .user-profile-right .feed-post-block .block .block-button button,
+          .feed-page .single-post-right .gullds-blocks .block .block-button button,
+          .feed-page .single-post-right .feed-post-block .block .block-button button,
+          .feed-page .feed-right .gullds-blocks .block .block-button button,
+          .feed-page .feed-right .feed-post-block .block .block-button button,
+          .feed-page .gullds-right .gullds-blocks .block .block-button button,
+          .feed-page .gullds-right .feed-post-block .block .block-button button {
+            width: 140px;
+            height: 30px;
+            background-color: #CACACA;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; }
+        .user-profile-page .user-profile-right .gullds-blocks .block:first-child .block-button button,
+        .user-profile-page .user-profile-right .feed-post-block .block:first-child .block-button button,
+        .user-profile-page .single-post-right .gullds-blocks .block:first-child .block-button button,
+        .user-profile-page .single-post-right .feed-post-block .block:first-child .block-button button,
+        .user-profile-page .feed-right .gullds-blocks .block:first-child .block-button button,
+        .user-profile-page .feed-right .feed-post-block .block:first-child .block-button button,
+        .user-profile-page .gullds-right .gullds-blocks .block:first-child .block-button button,
+        .user-profile-page .gullds-right .feed-post-block .block:first-child .block-button button,
+        .gullds .user-profile-right .gullds-blocks .block:first-child .block-button button,
+        .gullds .user-profile-right .feed-post-block .block:first-child .block-button button,
+        .gullds .single-post-right .gullds-blocks .block:first-child .block-button button,
+        .gullds .single-post-right .feed-post-block .block:first-child .block-button button,
+        .gullds .feed-right .gullds-blocks .block:first-child .block-button button,
+        .gullds .feed-right .feed-post-block .block:first-child .block-button button,
+        .gullds .gullds-right .gullds-blocks .block:first-child .block-button button,
+        .gullds .gullds-right .feed-post-block .block:first-child .block-button button,
+        .single-post-1 .user-profile-right .gullds-blocks .block:first-child .block-button button,
+        .single-post-1 .user-profile-right .feed-post-block .block:first-child .block-button button,
+        .single-post-1 .single-post-right .gullds-blocks .block:first-child .block-button button,
+        .single-post-1 .single-post-right .feed-post-block .block:first-child .block-button button,
+        .single-post-1 .feed-right .gullds-blocks .block:first-child .block-button button,
+        .single-post-1 .feed-right .feed-post-block .block:first-child .block-button button,
+        .single-post-1 .gullds-right .gullds-blocks .block:first-child .block-button button,
+        .single-post-1 .gullds-right .feed-post-block .block:first-child .block-button button,
+        .feed-page .user-profile-right .gullds-blocks .block:first-child .block-button button,
+        .feed-page .user-profile-right .feed-post-block .block:first-child .block-button button,
+        .feed-page .single-post-right .gullds-blocks .block:first-child .block-button button,
+        .feed-page .single-post-right .feed-post-block .block:first-child .block-button button,
+        .feed-page .feed-right .gullds-blocks .block:first-child .block-button button,
+        .feed-page .feed-right .feed-post-block .block:first-child .block-button button,
+        .feed-page .gullds-right .gullds-blocks .block:first-child .block-button button,
+        .feed-page .gullds-right .feed-post-block .block:first-child .block-button button {
+          background-color: #7D83FF; }
+      .user-profile-page .user-profile-right .gullds-blocks .block-two,
+      .user-profile-page .user-profile-right .gullds-blocks .block-four,
+      .user-profile-page .user-profile-right .gullds-blocks .block-six,
+      .user-profile-page .user-profile-right .gullds-blocks .block-eight,
+      .user-profile-page .user-profile-right .feed-post-block .block-two,
+      .user-profile-page .user-profile-right .feed-post-block .block-four,
+      .user-profile-page .user-profile-right .feed-post-block .block-six,
+      .user-profile-page .user-profile-right .feed-post-block .block-eight,
+      .user-profile-page .single-post-right .gullds-blocks .block-two,
+      .user-profile-page .single-post-right .gullds-blocks .block-four,
+      .user-profile-page .single-post-right .gullds-blocks .block-six,
+      .user-profile-page .single-post-right .gullds-blocks .block-eight,
+      .user-profile-page .single-post-right .feed-post-block .block-two,
+      .user-profile-page .single-post-right .feed-post-block .block-four,
+      .user-profile-page .single-post-right .feed-post-block .block-six,
+      .user-profile-page .single-post-right .feed-post-block .block-eight,
+      .user-profile-page .feed-right .gullds-blocks .block-two,
+      .user-profile-page .feed-right .gullds-blocks .block-four,
+      .user-profile-page .feed-right .gullds-blocks .block-six,
+      .user-profile-page .feed-right .gullds-blocks .block-eight,
+      .user-profile-page .feed-right .feed-post-block .block-two,
+      .user-profile-page .feed-right .feed-post-block .block-four,
+      .user-profile-page .feed-right .feed-post-block .block-six,
+      .user-profile-page .feed-right .feed-post-block .block-eight,
+      .user-profile-page .gullds-right .gullds-blocks .block-two,
+      .user-profile-page .gullds-right .gullds-blocks .block-four,
+      .user-profile-page .gullds-right .gullds-blocks .block-six,
+      .user-profile-page .gullds-right .gullds-blocks .block-eight,
+      .user-profile-page .gullds-right .feed-post-block .block-two,
+      .user-profile-page .gullds-right .feed-post-block .block-four,
+      .user-profile-page .gullds-right .feed-post-block .block-six,
+      .user-profile-page .gullds-right .feed-post-block .block-eight,
+      .gullds .user-profile-right .gullds-blocks .block-two,
+      .gullds .user-profile-right .gullds-blocks .block-four,
+      .gullds .user-profile-right .gullds-blocks .block-six,
+      .gullds .user-profile-right .gullds-blocks .block-eight,
+      .gullds .user-profile-right .feed-post-block .block-two,
+      .gullds .user-profile-right .feed-post-block .block-four,
+      .gullds .user-profile-right .feed-post-block .block-six,
+      .gullds .user-profile-right .feed-post-block .block-eight,
+      .gullds .single-post-right .gullds-blocks .block-two,
+      .gullds .single-post-right .gullds-blocks .block-four,
+      .gullds .single-post-right .gullds-blocks .block-six,
+      .gullds .single-post-right .gullds-blocks .block-eight,
+      .gullds .single-post-right .feed-post-block .block-two,
+      .gullds .single-post-right .feed-post-block .block-four,
+      .gullds .single-post-right .feed-post-block .block-six,
+      .gullds .single-post-right .feed-post-block .block-eight,
+      .gullds .feed-right .gullds-blocks .block-two,
+      .gullds .feed-right .gullds-blocks .block-four,
+      .gullds .feed-right .gullds-blocks .block-six,
+      .gullds .feed-right .gullds-blocks .block-eight,
+      .gullds .feed-right .feed-post-block .block-two,
+      .gullds .feed-right .feed-post-block .block-four,
+      .gullds .feed-right .feed-post-block .block-six,
+      .gullds .feed-right .feed-post-block .block-eight,
+      .gullds .gullds-right .gullds-blocks .block-two,
+      .gullds .gullds-right .gullds-blocks .block-four,
+      .gullds .gullds-right .gullds-blocks .block-six,
+      .gullds .gullds-right .gullds-blocks .block-eight,
+      .gullds .gullds-right .feed-post-block .block-two,
+      .gullds .gullds-right .feed-post-block .block-four,
+      .gullds .gullds-right .feed-post-block .block-six,
+      .gullds .gullds-right .feed-post-block .block-eight,
+      .single-post-1 .user-profile-right .gullds-blocks .block-two,
+      .single-post-1 .user-profile-right .gullds-blocks .block-four,
+      .single-post-1 .user-profile-right .gullds-blocks .block-six,
+      .single-post-1 .user-profile-right .gullds-blocks .block-eight,
+      .single-post-1 .user-profile-right .feed-post-block .block-two,
+      .single-post-1 .user-profile-right .feed-post-block .block-four,
+      .single-post-1 .user-profile-right .feed-post-block .block-six,
+      .single-post-1 .user-profile-right .feed-post-block .block-eight,
+      .single-post-1 .single-post-right .gullds-blocks .block-two,
+      .single-post-1 .single-post-right .gullds-blocks .block-four,
+      .single-post-1 .single-post-right .gullds-blocks .block-six,
+      .single-post-1 .single-post-right .gullds-blocks .block-eight,
+      .single-post-1 .single-post-right .feed-post-block .block-two,
+      .single-post-1 .single-post-right .feed-post-block .block-four,
+      .single-post-1 .single-post-right .feed-post-block .block-six,
+      .single-post-1 .single-post-right .feed-post-block .block-eight,
+      .single-post-1 .feed-right .gullds-blocks .block-two,
+      .single-post-1 .feed-right .gullds-blocks .block-four,
+      .single-post-1 .feed-right .gullds-blocks .block-six,
+      .single-post-1 .feed-right .gullds-blocks .block-eight,
+      .single-post-1 .feed-right .feed-post-block .block-two,
+      .single-post-1 .feed-right .feed-post-block .block-four,
+      .single-post-1 .feed-right .feed-post-block .block-six,
+      .single-post-1 .feed-right .feed-post-block .block-eight,
+      .single-post-1 .gullds-right .gullds-blocks .block-two,
+      .single-post-1 .gullds-right .gullds-blocks .block-four,
+      .single-post-1 .gullds-right .gullds-blocks .block-six,
+      .single-post-1 .gullds-right .gullds-blocks .block-eight,
+      .single-post-1 .gullds-right .feed-post-block .block-two,
+      .single-post-1 .gullds-right .feed-post-block .block-four,
+      .single-post-1 .gullds-right .feed-post-block .block-six,
+      .single-post-1 .gullds-right .feed-post-block .block-eight,
+      .feed-page .user-profile-right .gullds-blocks .block-two,
+      .feed-page .user-profile-right .gullds-blocks .block-four,
+      .feed-page .user-profile-right .gullds-blocks .block-six,
+      .feed-page .user-profile-right .gullds-blocks .block-eight,
+      .feed-page .user-profile-right .feed-post-block .block-two,
+      .feed-page .user-profile-right .feed-post-block .block-four,
+      .feed-page .user-profile-right .feed-post-block .block-six,
+      .feed-page .user-profile-right .feed-post-block .block-eight,
+      .feed-page .single-post-right .gullds-blocks .block-two,
+      .feed-page .single-post-right .gullds-blocks .block-four,
+      .feed-page .single-post-right .gullds-blocks .block-six,
+      .feed-page .single-post-right .gullds-blocks .block-eight,
+      .feed-page .single-post-right .feed-post-block .block-two,
+      .feed-page .single-post-right .feed-post-block .block-four,
+      .feed-page .single-post-right .feed-post-block .block-six,
+      .feed-page .single-post-right .feed-post-block .block-eight,
+      .feed-page .feed-right .gullds-blocks .block-two,
+      .feed-page .feed-right .gullds-blocks .block-four,
+      .feed-page .feed-right .gullds-blocks .block-six,
+      .feed-page .feed-right .gullds-blocks .block-eight,
+      .feed-page .feed-right .feed-post-block .block-two,
+      .feed-page .feed-right .feed-post-block .block-four,
+      .feed-page .feed-right .feed-post-block .block-six,
+      .feed-page .feed-right .feed-post-block .block-eight,
+      .feed-page .gullds-right .gullds-blocks .block-two,
+      .feed-page .gullds-right .gullds-blocks .block-four,
+      .feed-page .gullds-right .gullds-blocks .block-six,
+      .feed-page .gullds-right .gullds-blocks .block-eight,
+      .feed-page .gullds-right .feed-post-block .block-two,
+      .feed-page .gullds-right .feed-post-block .block-four,
+      .feed-page .gullds-right .feed-post-block .block-six,
+      .feed-page .gullds-right .feed-post-block .block-eight {
+        justify-self: right; }
+
+.feed-page .feed-left .left-logo,
+.feed-page .single-post-left .left-logo,
+.single-post-1 .feed-left .left-logo,
+.single-post-1 .single-post-left .left-logo {
+  margin-bottom: 60px; }
+.feed-page .feed-right .header,
+.single-post-1 .feed-right .header {
+  margin-bottom: 16px; }
+.feed-page .feed-right .feed-post-button,
+.single-post-1 .feed-right .feed-post-button {
+  width: 140px;
+  height: 30px;
+  background-color: #7D83FF;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px; }
+.feed-page .feed-right .block-three,
+.feed-page .feed-right .block-four,
+.single-post-1 .feed-right .block-three,
+.single-post-1 .feed-right .block-four {
+  border-top: 8px solid #7D83FF; }
+.feed-page .feed-right .block .block-label,
+.single-post-1 .feed-right .block .block-label {
+  margin-bottom: 2px; }
+.feed-page .feed-right .block .post-time,
+.single-post-1 .feed-right .block .post-time {
+  margin-bottom: 12px; }
+
+/*# sourceMappingURL=style.css.map */
